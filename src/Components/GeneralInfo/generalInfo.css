@@ -1,0 +1,63 @@
+.general-info-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+.cv-preview {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center; 
+}
+
+.cv-preview h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; 
+}
+
+.cv-preview .contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin: 0;
+}
+
+.cv-preview .divider {
+    margin: 0 10px;
+    color: #888;
+}
+
+
+.input-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-section input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-section button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-section button:hover {
+    background-color: #0056b3;
+}
