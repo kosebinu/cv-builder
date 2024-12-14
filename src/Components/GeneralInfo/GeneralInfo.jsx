@@ -33,37 +33,55 @@ function GeneralInfo() {
                 </div>
             )}
             <div className="input-section">
-                {editMode ? (
-                    <form>
-                        <input
-                            type="text"
-                            name="name"
-                            value={info.name}
-                            onChange={handleChange}
-                            placeholder="Name"
-                        />
-                        <input
-                            type="email"
-                            name="email"
-                            value={info.email}
-                            onChange={handleChange}
-                            placeholder="Email"
-                        />
-                        <input
-                            type="tel"
-                            name="phone"
-                            value={info.phone}
-                            onChange={handleChange}
-                            placeholder="Phone"
-                        />
-                        <button type="button" onClick={handleSubmit}>
-                            Submit
-                        </button>
-                    </form>
-                ) : (
-                    <button onClick={() => setEditMode(true)}>Edit</button>
-                )}
+    {editMode ? (
+        <form>
+            <h3>Contact Information</h3>
+            <hr />
+            <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={info.name}
+                    onChange={handleChange}
+                    placeholder="Enter your name"
+                />
             </div>
+
+            <div className="form-group">
+                <label htmlFor="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={info.email}
+                    onChange={handleChange}
+                    placeholder="Enter your email"
+                />
+            </div>
+
+            <div className="form-group">
+                <label htmlFor="phone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={info.phone}
+                    onChange={handleChange}
+                    placeholder="Enter your phone number"
+                />
+            </div>
+
+            <button type="button" onClick={handleSubmit}>
+                Submit
+            </button>
+        </form>
+    ) : (
+        <button onClick={() => setEditMode(true)}>Edit</button>
+    )}
+</div>
+
         </div>
     );
 }

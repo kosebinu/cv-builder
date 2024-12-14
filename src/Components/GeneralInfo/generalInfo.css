@@ -1,4 +1,18 @@
+/* Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 .general-info-container {
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start; 
     padding: 20px;
     font-family: Arial, sans-serif;
 }
@@ -10,22 +24,24 @@
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    text-align: center; 
+    text-align: center;
+    width: 100%;
+    max-width: 600px; 
 }
 
 .cv-preview h2 {
     margin: 0 0 10px;
-    font-size: 24px;
+    font-size: 2rem; 
     font-weight: bold;
-    text-align: center; 
 }
 
 .cv-preview .contact-info {
     display: flex;
+    flex-wrap: wrap; 
     justify-content: center;
     align-items: center;
-    font-size: 16px;
-    margin: 0;
+    font-size: 1rem;
+    gap: 10px; 
 }
 
 .cv-preview .divider {
@@ -33,23 +49,55 @@
     color: #888;
 }
 
+/* Form Section */
+.input-section {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px; 
+}
+
+.input-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
 
 .input-section form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
-.input-section input {
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    gap: 10px; 
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #555;
+    width: 100%; 
+    text-align: left;
+    max-width: 150px;
+}
+
+.form-group input {
+    flex-grow: 1;
     padding: 10px;
-    font-size: 16px;
+    font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    min-width: 200px; 
 }
+
 
 .input-section button {
     padding: 10px;
-    font-size: 16px;
+    font-size: 1rem;
     background-color: #007bff;
     color: white;
     border: none;
@@ -60,4 +108,50 @@
 
 .input-section button:hover {
     background-color: #0056b3;
+}
+
+
+.input-section hr {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin-top: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-group {
+        flex-direction: column; 
+        align-items: flex-start;
+        gap: 5px; 
+    }
+
+    .form-group label {
+        text-align: left; 
+        width: 100%; 
+    }
+
+    .cv-preview h2 {
+        font-size: 1.8rem;
+    }
+
+    .cv-preview .contact-info {
+        font-size: 0.9rem; 
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-group input {
+        width: 100%; 
+    }
+
+    .cv-preview {
+        padding: 15px; 
+        font-size: 0.9rem; 
+    }
+
+    .input-section h3 {
+        font-size: 1.2rem; 
+    }
 }
